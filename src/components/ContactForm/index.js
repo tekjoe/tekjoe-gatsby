@@ -64,7 +64,7 @@ export default props => {
   const [email, setEmail] = useState("")
   const [description, setDescription] = useState("")
   return (
-    <ContactForm onSubmit={e => e.preventDefault()} {...props}>
+    <ContactForm onSubmit={e => console.log("submitted")} {...props}>
       <label>Your Full Name (required)</label>
       <Input
         value={fullName}
@@ -81,7 +81,7 @@ export default props => {
       />
       <label>Describe your project in detail (optional)</label>
       <TextArea
-        onChange={e => e.target.value}
+        onChange={e => setDescription(e.target.value)}
         value={description}
         placeholder="Please be thorough as possible"
         rows="5"
