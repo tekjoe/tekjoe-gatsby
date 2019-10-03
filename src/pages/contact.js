@@ -74,7 +74,7 @@ const ContactPage = () => {
           </p>
         </ContactBody>
         <div className="contact__form">
-          <ContactForm />
+          <ContactForm data-netlify="true" />
         </div>
       </ContactSection>
     </Layout>

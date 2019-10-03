@@ -59,12 +59,12 @@ const FormButton = styled.button`
   }
 `
 
-export default () => {
+export default props => {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [description, setDescription] = useState("")
   return (
-    <ContactForm onSubmit={e => e.preventDefault()}>
+    <ContactForm onSubmit={e => e.preventDefault()} {...props}>
       <label>Your Full Name (required)</label>
       <Input
         value={fullName}
@@ -86,6 +86,7 @@ export default () => {
         placeholder="Please be thorough as possible"
         rows="5"
       />
+      <input type="hidden" name="form-name" value="contact" />
       <FormButton>Send your message</FormButton>
     </ContactForm>
   )
