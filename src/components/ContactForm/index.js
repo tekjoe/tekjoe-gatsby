@@ -4,6 +4,8 @@ import styled from "styled-components"
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+  flex: 1;
+  padding: 2rem;
   label {
     margin-bottom: 1rem;
     font-size: 1.125rem;
@@ -63,8 +65,9 @@ export default props => {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [description, setDescription] = useState("")
+
   return (
-    <ContactForm onSubmit={e => console.log("submitted")} {...props}>
+    <ContactForm {...props}>
       <label>Your Full Name (required)</label>
       <Input
         value={fullName}
@@ -77,7 +80,7 @@ export default props => {
         value={email}
         placeholder="Email Address"
         onChange={e => setEmail(e.target.value)}
-        type="text"
+        type="email"
       />
       <label>Describe your project in detail (optional)</label>
       <TextArea

@@ -18,10 +18,14 @@ const ContactSection = styled.section`
   margin: 4rem 0;
   display: flex;
   flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 `
 
 const ContactBody = styled.div`
-  margin-bottom: 5rem;
+  flex: 1;
+  padding: 2rem;
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -73,9 +77,12 @@ const ContactPage = () => {
             couple of days.
           </p>
         </ContactBody>
-        <div className="contact__form">
-          <ContactForm data-netlify="true" />
-        </div>
+        <ContactForm
+          data-netlify="true"
+          name="contact"
+          method="POST"
+          action="/about"
+        />
       </ContactSection>
     </Layout>
   )
