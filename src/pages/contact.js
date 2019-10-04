@@ -82,6 +82,7 @@ const ContactPage = () => {
           name="contact"
           method="POST"
           action="/about"
+          data-netlify-honeypot="bot-field"
         />
       </ContactSection>
     </Layout>

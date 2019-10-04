@@ -74,6 +74,7 @@ export default props => {
         placeholder="Full Name"
         onChange={e => setFullName(e.target.value)}
         type="text"
+        name="name"
       />
       <label>Your Email (required)</label>
       <Input
@@ -81,15 +82,18 @@ export default props => {
         placeholder="Email Address"
         onChange={e => setEmail(e.target.value)}
         type="email"
+        name="email"
       />
       <label>Describe your project in detail (optional)</label>
       <TextArea
         onChange={e => setDescription(e.target.value)}
         value={description}
+        name="description"
         placeholder="Please be thorough as possible"
         rows="5"
       />
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
       <FormButton>Send your message</FormButton>
     </ContactForm>
   )
