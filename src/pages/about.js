@@ -81,18 +81,18 @@ const SkillsTag = styled.span`
   font-size: 0.75rem;
 `
 
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
       <Masthead>
         <h1 style={{ textAlign: "center" }}>About Joe Ramirez</h1>
       </Masthead>
-      {/* <Portrait>
+      <Portrait>
         <PortraitContainer>
           <Img fixed={data.file.childImageSharp.fixed} />
         </PortraitContainer>
-      </Portrait> */}
+      </Portrait>
       <AboutSection>
         <h2>
           I'm a web designer & developer with a penchant for solving problems
