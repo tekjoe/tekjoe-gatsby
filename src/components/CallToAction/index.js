@@ -82,7 +82,7 @@ export default () => {
       <CtaBody>
         <Subtitle>Latest Work –</Subtitle>
         <Title>Building a better tomorrow, one website at a time.</Title>
-        <CtaLink to="/">See my profile</CtaLink>
+        <CtaLink to="/about">See my profile</CtaLink>
       </CtaBody>
       <CtaImage style={{ height: "100%", width: "100%" }}>
         <img src={contemplate} alt="Tekjoe contemplating web design" />

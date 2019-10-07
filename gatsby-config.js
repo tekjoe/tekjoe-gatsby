@@ -39,8 +39,8 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "ofixdszp",
-        dataset: "blog",
+        projectId: process.env.SANITY_PROJECTID,
+        dataset: process.env.SANITY_DATASET,
         token: process.env.MY_SANITY_TOKEN,
       },
     },

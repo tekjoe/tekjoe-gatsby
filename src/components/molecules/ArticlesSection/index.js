@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SlideLink from "../../atoms/SlideLink"
+import Article from "../Article"
 
 const ArticleSection = styled.section`
   grid-area: articles;
@@ -30,44 +31,10 @@ const ArticlesIntro = styled.div`
   @media (min-width: 768px) {
     padding: 4rem;
     margin: 0;
+    margin-bottom: 2rem;
   }
   @media (min-width: 992px) {
     grid-column: 3 /-3;
-    padding: 0;
-  }
-`
-
-const Article = styled.article`
-  grid-column: 1/-1;
-  margin-bottom: 2rem;
-  p {
-    line-height: 1.65;
-    margin-bottom: 1.25rem;
-  }
-  .link {
-    margin-bottom: 1.25rem;
-  }
-  h2 {
-    font-size: 2rem;
-    margin: 1.25rem auto 0.5rem auto;
-  }
-  h2 a {
-    color: #001f3f;
-    &:hover {
-      color: #4666c9;
-    }
-  }
-  img {
-    margin-bottom: 0;
-    max-width: 100%;
-    background: #4666c9;
-  }
-  @media (min-width: 768px) {
-    padding: 2rem 4rem;
-  }
-  @media (min-width: 992px) {
-    grid-column: span 4;
-    margin: 0;
     padding: 0;
   }
 `
@@ -86,18 +53,12 @@ export default ({ articles }) => {
           My musings on web development, freelancing, productivity, movies,
           tech, and more.
         </h2>
-        <SlideLink to="/">Read more on my blog</SlideLink>
+        <h3>
+          <SlideLink to="/">Read more on my blog</SlideLink>
+        </h3>
       </ArticlesIntro>
       {articles.map(article => (
-        <Article>
-          {article.node.categories.map(category => (
-            <span>{category.title}</span>
-          ))}
-          <h2>{article.node.title}</h2>
-          <SlideLink to={`/blog/${article.node.slug.current}`}>
-            Read more
-          </SlideLink>
-        </Article>
+        <Article article={article} />
       ))}
     </ArticleSection>
   )

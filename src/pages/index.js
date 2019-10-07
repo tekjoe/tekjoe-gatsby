@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => (
         developer, and all-around fan of all things web.
       </h1>
       <h2>
-        <SlideLink to="/">More about me</SlideLink>
+        <SlideLink to="/about">More about me</SlideLink>
       </h2>
     </Masthead>
     <CallToAction />
@@ -40,6 +40,13 @@ export const query = graphql`
             current
           }
           title
+          mainImage {
+            asset {
+              fluid(maxWidth: 900, maxHeight: 400) {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
         }
       }
     }
