@@ -1,26 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Masthead from "../components/masthead"
+import Layout from "../components/organisms/Layout"
+import Masthead from "../components/molecules/Masthead"
 import SEO from "../components/seo"
-import CallToAction from "../components/CallToAction"
-import SignUp from "../components/SignUp"
+import CallToAction from "../components/organisms/CallToAction"
+import SignUp from "../components/organisms/SignUp"
 
 import SlideLink from "../components/atoms/SlideLink"
-import ArticlesSection from "../components/molecules/ArticlesSection"
+import ArticlesSection from "../components/organisms/ArticlesSection"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <Masthead>
-      <h1>
+      <h4 style={{ marginBottom: "1rem" }}>
         Hey there! I'm <SlideLink to="/">Joe Ramirez</SlideLink>, a designer,
         developer, and all-around fan of all things web.
-      </h1>
-      <h2>
-        <SlideLink to="/about">More about me</SlideLink>
-      </h2>
+      </h4>
+      <SlideLink fontSize="h5" to="/about">
+        More about me
+      </SlideLink>
     </Masthead>
     <CallToAction />
     <ArticlesSection articles={data.allSanityPost.edges} />

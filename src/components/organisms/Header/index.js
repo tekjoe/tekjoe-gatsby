@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-import SlideLink from "./atoms/SlideLink"
+import SlideLink from "../../atoms/SlideLink"
 
 const DesktopHeader = styled.header`
   grid-area: header;

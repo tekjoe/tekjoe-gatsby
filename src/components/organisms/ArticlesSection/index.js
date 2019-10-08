@@ -12,7 +12,7 @@ const ArticleSection = styled.section`
   @media (min-width: 992px) {
     grid-column: 2 /-2;
     grid-gap: 3rem;
-    margin: 4rem 2rem;
+    margin: 4rem 0 8rem 0;
   }
 `
 
@@ -39,9 +39,15 @@ const ArticlesIntro = styled.div`
   }
 `
 
-const ArticleSubtitle = styled.h3`
-  font-weight: 300;
-  color: #4666c9;
+const ArticleSubtitle = styled.p`
+  font-size: ${({ theme }) => theme.typography.h6};
+  margin-bottom: 1.5rem;
+  color: ${({ theme }) => theme.colors.mediumBlue};
+`
+const Title = styled.p`
+  font-size: ${({ theme }) => theme.typography.h4};
+  margin-bottom: 1.125rem;
+  line-height: 1.3;
 `
 
 export default ({ articles }) => {
@@ -49,13 +55,14 @@ export default ({ articles }) => {
     <ArticleSection>
       <ArticlesIntro>
         <ArticleSubtitle>Latest articles –</ArticleSubtitle>
-        <h2>
+        <Title>
           My musings on web development, freelancing, productivity, movies,
           tech, and more.
-        </h2>
-        <h3>
-          <SlideLink to="/">Read more on my blog</SlideLink>
-        </h3>
+        </Title>
+
+        <SlideLink fontSize="h5" to="/">
+          Read more on my blog
+        </SlideLink>
       </ArticlesIntro>
       {articles.map(article => (
         <Article article={article} />

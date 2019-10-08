@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import contemplate from "../../images/tekjoe-thinking.svg"
+import contemplate from "../../../images/tekjoe-thinking.svg"
 import { Link } from "gatsby"
 
 const CtaSection = styled.section`
@@ -65,15 +65,17 @@ const CtaImage = styled.div`
   }
 `
 
-const Subtitle = styled.h3`
+const Subtitle = styled.p`
+  font-size: ${({ theme }) => theme.typography.h6};
   margin-bottom: 1.5rem;
-  color: #95a7e0;
+  color: ${({ theme }) => theme.colors.lightBlue};
 `
 
-const Title = styled.h2`
+const Title = styled.p`
   font-size: 2.25rem;
   color: white;
   margin-bottom: 1.125rem;
+  line-height: 1.3;
 `
 
 export default () => {

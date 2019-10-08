@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Masthead from "../components/masthead"
-import SignUp from "../components/SignUp"
+import Layout from "../components/organisms/Layout"
+import Masthead from "../components/molecules/Masthead"
+import SignUp from "../components/organisms/SignUp"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 

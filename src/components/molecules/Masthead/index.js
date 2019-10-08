@@ -5,13 +5,6 @@ const MastheadSection = styled.div`
   grid-area: masthead;
   grid-column: 1 / -1;
   margin: 4rem 2rem;
-  h1 {
-    line-height: 1.25;
-    font-size: 2.25rem;
-  }
-  h2 {
-    margin-top: 2rem;
-  }
   @media (min-width: 768px) {
     margin: 4rem;
   }

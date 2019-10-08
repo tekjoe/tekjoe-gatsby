@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+import Layout from "../components/organisms/Layout"
 import ExternalLink from "../components/atoms/ExternalLink"
-import LeafletMap from "../components/LeafletMap"
-import ContactForm from "../components/molecules/ContactForm"
+import LeafletMap from "../components/organisms/LeafletMap"
+import ContactForm from "../components/organisms/ContactForm"
 
 const MapSection = styled(LeafletMap)`
   grid-column: 1/-1;

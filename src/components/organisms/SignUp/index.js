@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import barChart from "../../images/bar-chart.svg"
+import barChart from "../../../images/bar-chart.svg"
 
 const SignUpLink = styled(Link)`
   font-size: 1.5rem;

@@ -3,11 +3,26 @@ import PropTypes from "prop-types"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import Footer from "./Footer"
+import Header from "../Header"
+import Footer from "../Footer"
 
 const theme = {
-  fontSize: "2rem",
+  colors: {
+    darkBlue: "#263d83",
+    mediumBlue: "#4666c9",
+    lightBlue: "#95a7e0",
+    mintGreen: "#18f0ae",
+  },
+  typography: {
+    small: "0.8rem",
+    paragraph: "1rem",
+    h6: "1.25rem",
+    h5: "1.563rem",
+    h4: "1.953rem",
+    h3: "2.441rem",
+    h2: "3.052rem",
+    h1: "3.815rem",
+  },
   color: "#001f3f",
 }
 
@@ -24,18 +39,30 @@ const GlobalStyle = createGlobalStyle`
     background: #f7f9fe;
     color: #001f3f; 
   };
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  p {
+    font-size: ${theme.typography.paragraph};
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
   }
-
-  p {
-    font-size: 1.125rem;
-    line-height: 1.6;
+  h1 {
+    font-size: ${theme.typography.h1}
+  }
+  h2 {
+    font-size: ${theme.typography.h2}
+  }
+  h3 {
+    font-size: ${theme.typography.h3}
+  }
+  h4 {
+    font-size: ${theme.typography.h4}
+  }
+  h5 {
+    font-size: ${theme.typography.h5}
+  }
+  h6 {
+    font-size: ${theme.typography.h6}
   }
 `
 

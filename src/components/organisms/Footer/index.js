@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import SlideLink from "../atoms/SlideLink"
-import ExternalLink from "../atoms/ExternalLink"
+import SlideLink from "../../atoms/SlideLink"
+import ExternalLink from "../../atoms/ExternalLink"
 
 const Footer = styled.footer`
   grid-area: footer;
