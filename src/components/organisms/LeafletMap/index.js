@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { Map, Marker, TileLayer, Popup } from "react-leaflet"
 
+const apiKey = process.env.GATSBY_API_KEY
+
 export default class LeafletMap extends Component {
   state = {
     lat: 42.995701,
@@ -9,8 +11,6 @@ export default class LeafletMap extends Component {
   }
 
   render() {
-    const accessToken =
-      "pk.eyJ1IjoidGVram9lIiwiYSI6Imltd3lPR0EifQ.xTPjsZXiGetNaeGq7oJaLA"
     const position = [this.state.lat, this.state.lng]
     if (typeof window !== "undefined") {
       return (
@@ -23,7 +23,7 @@ export default class LeafletMap extends Component {
         >
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/{z}/{x}/{y}?access_token=${accessToken}`}
+            url={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/{z}/{x}/{y}?access_token=${apiKey}`}
           />
           <Marker position={position}>
             <Popup>

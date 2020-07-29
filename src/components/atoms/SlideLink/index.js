@@ -17,14 +17,14 @@ const SlideLink = styled(Link)`
     (fontSize === "h4" && theme.typography.h4)};
   &:hover {
     color: ${({ theme, variant }) =>
-      variant === "green" ? theme.colors.darkBlue : "#005ebf"};
+      variant === "green" ? theme.colors.darkBlue : theme.colors.linkTextHover};
   }
   span {
     display: inline;
     transition: all 0.15s linear;
     text-decoration: none;
     padding-bottom: 0.25rem;
-    background: linear-gradient(to right, #18f0ae 0%, #18f0ae 100%);
+    background: ${({ theme }) => theme.colors.linkUnderlineHover};
     background-size: 0% 0.85rem;
     background-repeat: no-repeat;
     background-position: left 85%;

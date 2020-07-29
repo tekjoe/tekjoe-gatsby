@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 import SlideLink from "../../atoms/SlideLink"
+import ThemeToggler from "../../molecules/ThemeToggler"
 
 const DesktopHeader = styled.header`
   grid-area: header;
@@ -20,7 +21,9 @@ const DesktopHeader = styled.header`
   }
 `
 
-const Navigation = styled.nav``
+const Navigation = styled.nav`
+  display: flex;
+`
 
 const NavigationMenu = styled.ul`
   display: none;
@@ -43,9 +46,6 @@ const NavigationMenu = styled.ul`
 
 const Header = ({ siteTitle, toggleTheme }) => (
   <DesktopHeader>
-    <div className="toggler" onClick={toggleTheme}>
-      Toggle Theme
-    </div>
     <div>
       <SlideLink to="/">&lt;{siteTitle}/&gt;</SlideLink>
     </div>
@@ -64,6 +64,7 @@ const Header = ({ siteTitle, toggleTheme }) => (
           <SlideLink to="/blog">Blog</SlideLink>
         </li>
       </NavigationMenu>
+      <ThemeToggler toggleTheme={toggleTheme} />
     </Navigation>
   </DesktopHeader>
 )

@@ -4,14 +4,19 @@ export const darkTheme = {
     mediumBlue: "#4666c9",
     lightBlue: "#95a7e0",
     mintGreen: "#18f0ae",
-    background: "hsl(203, 30%, 26%)",
-    mainBackground: "hsl(206, 46%, 37%)",
+    mainBackground: "hsl(203, 30%, 26%)",
+    background: "hsl(206, 35%, 23%)",
     fontColor: "hsl(200, 30%, 96%)",
     accentColor: "hsl(202, 29%, 20%)",
     accentColorInverse: "hsl(200, 30%, 96%)",
     linkText: "hsl(0,90%,85%)",
-    linkUnderline: `linear-gradient(to right, hsl(206,46%,50%) 0%, hsl(206,46%,50%) 100%)`,
-    gradient: `linear-gradient(to right top, #33658a, #3282a5, #32a0bd, #3dbed1, #55dde0);`,
+    linkTextHover: "hsl(0,90%,80%)",
+    linkUnderline: `linear-gradient(to right, hsl(206,35%,35%) 0%, hsl(206,35%,35%) 100%)`,
+    linkUnderlineHover: `linear-gradient(to right, hsl(181,69%,24%) 0%, hsl(181,69%,24%) 100%)`,
+    gradientTopRight: `linear-gradient(to right top, #33658a, #3282a5, #32a0bd, #3dbed1, #55dde0)`,
+    gradientBottomRight: `linear-gradient(to right bottom, #33658a, #3282a5, #32a0bd, #3dbed1, #55dde0)`,
+    toggleBackground: `hsl(206, 35%, 23%)`,
+    toggleColor: `hsl(200, 30%, 96%)`,
   },
   typography: {
     small: "0.8rem",
@@ -27,13 +32,6 @@ export const darkTheme = {
   },
 }
 
-// bodyBackground
-// mainBackground
-// bodyFont
-// linkText
-// linkUnderline
-// linkUnderlineHover
-
 export const lightTheme = {
   colors: {
     darkBlue: "#263d83",
@@ -46,13 +44,23 @@ export const lightTheme = {
     accentColor: "hsl(225, 55%, 33%)",
     accentColorInverse: "hsl(200, 30%, 96%)",
     linkText: "#005ebf",
+    linkTextHover: "#263d83",
     linkUnderline: "linear-gradient(to right, #f2f3f6 0%, #f2f3f6 100%)",
-    gradient: `linear-gradient(
+    linkUnderlineHover: "linear-gradient(to right, #18f0ae 0%, #18f0ae 100%)",
+    gradientTopRight: `linear-gradient(
       45deg,
       #ff5458 0%,
       #ffc1bd 50%,
       #ffd123 100%
     )`,
+    gradientBottomRight: `linear-gradient(
+      to bottom right,
+      #ff5458 0%,
+      #ffc1bd 50%,
+      #ffd123 100%
+    )`,
+    toggleBackground: `hsl(228,78%,90%)`,
+    toggleColor: `#4666c9`,
   },
   typography: {
     small: "0.8rem",

@@ -36,7 +36,7 @@ const SignUpImage = styled.div`
   align-items: center;
   flex: 1;
   padding: 2rem;
-  background: #fe90ad;
+  background: ${({ theme }) => theme.colors.gradientBottomRight};
   img {
     width: 100%;
   }
@@ -47,7 +47,7 @@ const SignUpImage = styled.div`
 
 const SignUpBody = styled.div`
   color: white;
-  background: #263d83;
+  background: ${({ theme }) => theme.colors.accentColor};
   justify-content: space-between;
   flex: 2;
   padding: 3rem;
@@ -56,7 +56,7 @@ const SignUpBody = styled.div`
   }
   h2 {
     font-size: 2rem;
-    color: #18f0ae;
+    color: ${({ theme }) => theme.colors.mintGreen};
   }
   p {
     font-size: 1.25rem;

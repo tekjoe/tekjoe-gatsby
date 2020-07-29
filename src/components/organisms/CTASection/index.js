@@ -17,7 +17,7 @@ const CtaSection = styled.section`
 `
 
 const CtaImage = styled.div`
-  background-image: ${({ theme }) => theme.colors.gradient};
+  background-image: ${({ theme }) => theme.colors.gradientTopRight};
   display: flex;
   max-height: 100%;
   img {

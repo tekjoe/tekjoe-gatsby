@@ -66,10 +66,9 @@ export default () => {
       <FooterBio>
         <h2>&lt;tekjoe/&gt;</h2>
         <p>
-          Freelance web developer with a passion for solving problems. Let's
-          build something together.
+          Joe Ramirez is a freelance web developer with a passion for solving
+          problems. Let's build something together.
         </p>
-        <SlideLink to="/">Learn more about me</SlideLink>
       </FooterBio>
       <FooterNav>
         <ul>
