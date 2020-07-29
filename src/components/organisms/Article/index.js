@@ -36,22 +36,20 @@ const StyledImage = styled(Img)`
 `
 
 const CategoryList = styled.div`
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
 `
 
 export default ({ article }) => {
   return (
     <Article>
+      <SlideLink fontSize="h4" to={`/blog/${article.node.slug.current}`}>
+        {article.node.title}
+      </SlideLink>
       <CategoryList>
         {article.node.categories.map(category => (
           <Badge>{category.title}</Badge>
         ))}
       </CategoryList>
-
-      <SlideLink fontSize="h4" to={`/blog/${article.node.slug.current}`}>
-        {article.node.title}
-      </SlideLink>
-
       <StyledImage fluid={article.node.mainImage.asset.fluid} />
       <p style={{ fontSize: "1.125rem" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fugit

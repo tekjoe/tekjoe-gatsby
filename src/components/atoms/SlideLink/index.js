@@ -3,10 +3,11 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const SlideLink = styled(Link)`
-  color: #005ebf;
+  color: ${({ theme, variant }) =>
+    variant === "green" ? theme.colors.mintGreen : theme.colors.linkText};
   text-decoration: none;
   padding-bottom: 0.25rem;
-  background: linear-gradient(to right, #f2f3f6 0%, #f2f3f6 100%);
+  background: ${({ theme }) => theme.colors.linkUnderline};
   background-size: 100% 0.85rem;
   background-repeat: no-repeat;
   background-position: left 85%;
@@ -14,6 +15,10 @@ const SlideLink = styled(Link)`
     (fontSize === "h6" && theme.typography.h6) ||
     (fontSize === "h5" && theme.typography.h5) ||
     (fontSize === "h4" && theme.typography.h4)};
+  &:hover {
+    color: ${({ theme, variant }) =>
+      variant === "green" ? theme.colors.darkBlue : "#005ebf"};
+  }
   span {
     display: inline;
     transition: all 0.15s linear;

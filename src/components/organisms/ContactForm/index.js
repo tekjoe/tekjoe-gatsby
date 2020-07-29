@@ -24,24 +24,29 @@ export default props => {
 
   return (
     <ContactForm {...props}>
-      <label>Your Full Name (required)</label>
+      <label htmlFor="name">Your Full Name (required)</label>
       <Input
+        id="name"
         value={fullName}
         placeholder="Full Name"
         onChange={e => setFullName(e.target.value)}
         type="text"
         name="name"
       />
-      <label>Your Email (required)</label>
+      <label htmlFor="email">Your Email (required)</label>
       <Input
+        id="email"
         value={email}
         placeholder="Email Address"
         onChange={e => setEmail(e.target.value)}
         type="email"
         name="email"
       />
-      <label>Describe your project in detail (optional)</label>
+      <label htmlFor="message">
+        Describe your project in detail (optional)
+      </label>
       <TextArea
+        id="message"
         onChange={e => setDescription(e.target.value)}
         value={description}
         name="description"

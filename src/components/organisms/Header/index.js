@@ -41,8 +41,11 @@ const NavigationMenu = styled.ul`
   }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, toggleTheme }) => (
   <DesktopHeader>
+    <div className="toggler" onClick={toggleTheme}>
+      Toggle Theme
+    </div>
     <div>
       <SlideLink to="/">&lt;{siteTitle}/&gt;</SlideLink>
     </div>
@@ -58,7 +61,7 @@ const Header = ({ siteTitle }) => (
           <SlideLink to="/contact">Contact</SlideLink>
         </li>
         <li>
-          <SlideLink to="/">Blog</SlideLink>
+          <SlideLink to="/blog">Blog</SlideLink>
         </li>
       </NavigationMenu>
     </Navigation>

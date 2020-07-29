@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Layout from "../components/organisms/Layout"
+import { Layout } from "../components/organisms/Layout"
 import ExternalLink from "../components/atoms/ExternalLink"
 import LeafletMap from "../components/organisms/LeafletMap"
 import ContactForm from "../components/organisms/ContactForm"

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import SlideLink from "../../atoms/SlideLink"
 import Article from "../Article"
+import SlideLink from "../../atoms/SlideLink"
 
 const ArticleSection = styled.section`
   grid-area: articles;
@@ -16,7 +16,7 @@ const ArticleSection = styled.section`
   }
 `
 
-const ArticlesIntro = styled.div`
+ArticleSection.Intro = styled.div`
   grid-column: 1/-1;
   margin-bottom: 4rem;
   h2 {
@@ -26,44 +26,41 @@ const ArticlesIntro = styled.div`
     margin-bottom: 1.125rem;
   }
   a {
-    font-size: 1.5;
+    font-size: 1.5rem;
   }
   @media (min-width: 768px) {
     padding: 4rem;
     margin: 0;
-    margin-bottom: 2rem;
   }
   @media (min-width: 992px) {
     grid-column: 3 /-3;
     padding: 0;
   }
+  @media (min-width: 1200px) {
+  }
 `
 
-const ArticleSubtitle = styled.p`
-  font-size: ${({ theme }) => theme.typography.h6};
-  margin-bottom: 1.5rem;
+ArticleSection.Intro.Subtitle = styled.h3`
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.mediumBlue};
-`
-const Title = styled.p`
-  font-size: ${({ theme }) => theme.typography.h4};
-  margin-bottom: 1.125rem;
-  line-height: 1.3;
+  font-size: ${({ theme }) => theme.typography.h6};
 `
 
 export default ({ articles }) => {
   return (
     <ArticleSection>
-      <ArticlesIntro>
-        <ArticleSubtitle>Latest articles –</ArticleSubtitle>
-        <Title>
+      <ArticleSection.Intro>
+        <ArticleSection.Intro.Subtitle>
+          Latest articles –
+        </ArticleSection.Intro.Subtitle>
+        <h2>
           My musings on web development, freelancing, productivity, movies,
           tech, and more.
-        </Title>
-
-        <SlideLink fontSize="h5" to="/">
+        </h2>
+        <SlideLink fontSize="h6" to="/blog" variant="green">
           Read more on my blog
         </SlideLink>
-      </ArticlesIntro>
+      </ArticleSection.Intro>
       {articles.map(article => (
         <Article article={article} />
       ))}
