@@ -63,8 +63,9 @@ export default ({ toggleTheme }) => {
   }
   return (
     <ThemeToggler>
-      <ThemeToggler.Switch>
+      <ThemeToggler.Switch htmlFor="themeToggler">
         <input
+          id="themeToggler"
           type="checkbox"
           onChange={toggleTheme}
           checked={checked}
