@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const FormButton = styled.button`
-  background: #18f0ae;
+  background: #3a837a;
   color: white;
   cursor: pointer;
   transition: all 0.2s ease-in;
@@ -12,15 +12,16 @@ const FormButton = styled.button`
   border-radius: 5px;
   padding: 0.75rem;
   margin-bottom: 2rem;
-  transition: all 0.5s;
+  transition: background 0.5s, transform 0.3s, box-shadow 0.3s;
   font-size: 1rem;
   &:hover {
-    background: #fe90ad;
+    background: #2ab280;
     color: white;
+    transform: scale(1.01);
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
   }
-  :disabled {
-    background: #f2f3f6;
-    cursor: not-allowed;
+  &:active {
+    transform: scale(0.98);
   }
 `
 

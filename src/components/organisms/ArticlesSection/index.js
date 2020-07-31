@@ -30,7 +30,7 @@ ArticleSection.Intro = styled.div`
   }
   @media (min-width: 768px) {
     padding: 4rem;
-    margin: 0;
+    margin-bottom: 3rem;
   }
   @media (min-width: 992px) {
     grid-column: 3 /-3;
@@ -42,7 +42,7 @@ ArticleSection.Intro = styled.div`
 
 ArticleSection.Intro.Subtitle = styled.h3`
   font-weight: 300;
-  color: ${({ theme }) => theme.colors.linkText};
+  color: ${({ theme }) => theme.colors.subtitleColor};
   font-size: ${({ theme }) => theme.typography.h6};
 `
 
@@ -62,7 +62,7 @@ export default ({ articles }) => {
         </SlideLink>
       </ArticleSection.Intro>
       {articles.map(article => (
-        <Article article={article} />
+        <Article article={article} key={article.node._id} />
       ))}
     </ArticleSection>
   )

@@ -7,7 +7,7 @@ const ExternalLink = styled.a`
   text-decoration: none;
   padding-bottom: 0.25rem;
   background: ${({ theme }) => theme.colors.linkUnderline};
-  background-size: 100% 0.85rem;
+  background-size: 100% 0.65rem;
   background-repeat: no-repeat;
   background-position: left 85%;
   span {
@@ -16,11 +16,11 @@ const ExternalLink = styled.a`
     text-decoration: none;
     padding-bottom: 0.25rem;
     background: ${({ theme }) => theme.colors.linkUnderlineHover};
-    background-size: 0% 0.85rem;
+    background-size: 0% 0.65rem;
     background-repeat: no-repeat;
     background-position: left 85%;
     &:hover {
-      background-size: 100% 0.85rem;
+      background-size: 100% 0.65rem;
     }
   }
 `

@@ -24,7 +24,7 @@ export default props => {
 
   return (
     <ContactForm {...props}>
-      <label htmlFor="name">Your Full Name (required)</label>
+      <label htmlFor="name">Your Full Name</label>
       <Input
         id="name"
         value={fullName}
@@ -33,7 +33,7 @@ export default props => {
         type="text"
         name="name"
       />
-      <label htmlFor="email">Your Email (required)</label>
+      <label htmlFor="email">Your Email</label>
       <Input
         id="email"
         value={email}
@@ -55,7 +55,9 @@ export default props => {
       />
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
-      <FormButton disabled={!email || !fullName}>Send your message</FormButton>
+      <FormButton onClick={e => e.preventDefault()}>
+        Send your message
+      </FormButton>
     </ContactForm>
   )
 }

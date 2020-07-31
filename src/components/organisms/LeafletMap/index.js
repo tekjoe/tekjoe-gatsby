@@ -23,7 +23,7 @@ export default class LeafletMap extends Component {
         >
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/{z}/{x}/{y}?access_token=${apiKey}`}
+            url={`https://api.mapbox.com/styles/v1/tekjoe/ck558iss20d681cqeyj4u2ov6/tiles/256/{z}/{x}/{y}@2x?access_token=${apiKey}`}
           />
           <Marker position={position}>
             <Popup>

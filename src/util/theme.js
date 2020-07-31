@@ -1,22 +1,22 @@
 export const darkTheme = {
+  theme: "dark",
   colors: {
-    darkBlue: "#263d83",
-    mediumBlue: "#4666c9",
-    lightBlue: "#95a7e0",
     mintGreen: "#18f0ae",
-    mainBackground: "hsl(203, 30%, 26%)",
-    background: "hsl(206, 35%, 23%)",
-    fontColor: "hsl(200, 30%, 96%)",
+    background: "hsl(206, 35%, 22%)",
+    mainBackground: "hsl(210, 19%, 28%)",
+    fontColor: "hsl(60, 28%, 92%)",
+    subtitleColor: `hsl(332, 59%, 78%)`,
     accentColor: "hsl(202, 29%, 20%)",
     accentColorInverse: "hsl(200, 30%, 96%)",
-    linkText: "hsl(0,90%,85%)",
+    linkText: "hsl(192,100%,91%)",
     linkTextHover: "hsl(0,90%,80%)",
-    linkUnderline: `linear-gradient(to right, hsl(206,35%,35%) 0%, hsl(206,35%,35%) 100%)`,
-    linkUnderlineHover: `linear-gradient(to right, hsl(181,69%,24%) 0%, hsl(181,69%,24%) 100%)`,
-    gradientTopRight: `linear-gradient(to right top, #33658a, #3282a5, #32a0bd, #3dbed1, #55dde0)`,
-    gradientBottomRight: `linear-gradient(to right bottom, #33658a, #3282a5, #32a0bd, #3dbed1, #55dde0)`,
+    linkUnderlineHover: `linear-gradient(to right, hsl(210, 19%, 28%) 0%, hsl(210, 19%, 28%) 100%)`,
+    linkUnderline: `linear-gradient(to right, hsl(332,12%,44%) 0%, hsl(332,12%,44%) 100%)`,
+    gradientTopRight: `linear-gradient(to right top, #42576a, #586b7e, #6e8192, #8597a7, #9dadbc)`,
+    gradientBottomRight: `linear-gradient(to right bottom, #42576a, #586b7e, #6e8192, #8597a7, #9dadbc)`,
     toggleBackground: `hsl(206, 35%, 23%)`,
     toggleColor: `hsl(200, 30%, 96%)`,
+    inputBorder: `#44526d`,
   },
   typography: {
     small: "0.8rem",
@@ -33,14 +33,13 @@ export const darkTheme = {
 }
 
 export const lightTheme = {
+  theme: "light",
   colors: {
-    darkBlue: "#263d83",
-    mediumBlue: "#4666c9",
-    lightBlue: "#95a7e0",
     mintGreen: "#18f0ae",
     background: "hsl(228,78%,98%)",
     mainBackground: "hsl(0, 0%, 100%)",
     fontColor: "hsl(225, 55%, 18%)",
+    subtitleColor: `#95a7e0`,
     accentColor: "hsl(225, 55%, 33%)",
     accentColorInverse: "hsl(200, 30%, 96%)",
     linkText: "#005ebf",
@@ -61,6 +60,7 @@ export const lightTheme = {
     )`,
     toggleBackground: `hsl(228,78%,90%)`,
     toggleColor: `#4666c9`,
+    inputBorder: `#f2f3f6`,
   },
   typography: {
     small: "0.8rem",

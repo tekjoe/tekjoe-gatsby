@@ -29,10 +29,11 @@ const ContactBody = styled.div`
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    &:last-of-type {
+      margin-top: 3rem;
+    }
   }
-  h2:nth-last-child(1) {
-    margin-top: 3rem;
-  }
+
   p {
     margin-bottom: 1.25rem;
   }
@@ -48,7 +49,7 @@ const ContactPage = () => {
           <h2>Let's build something together</h2>
           <p>
             I live and work in Milwaukee, but the internet is my home. If you
-            have a quick question or comment, hit me up&nbsp;
+            have a quick question or comment, direct message me&nbsp;
             <ExternalLink
               href="https://www.twitter.com/_tekjoe"
               target="_blank"

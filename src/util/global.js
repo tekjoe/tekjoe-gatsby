@@ -21,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   p {
     font-size: ${({ theme }) => theme.typography.paragraph};
     line-height: 1.6;
+    margin-bottom: 1.25rem;
+    @media (min-width: 1024px) {
+      font-size: 1.125rem;
+    }
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.typography.titleFont};

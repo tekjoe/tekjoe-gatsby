@@ -24,7 +24,7 @@ const Article = styled.article`
     padding: 2rem 4rem;
   }
   @media (min-width: 992px) {
-    grid-column: span 4;
+    grid-column: span 6;
     margin: 0;
     padding: 0;
   }

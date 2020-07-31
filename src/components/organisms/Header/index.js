@@ -55,7 +55,7 @@ const Header = ({ siteTitle, toggleTheme }) => (
           <SlideLink to="/about">About</SlideLink>
         </li>
         <li>
-          <SlideLink to="/">Work</SlideLink>
+          <SlideLink to="/work">Work</SlideLink>
         </li>
         <li>
           <SlideLink to="/contact">Contact</SlideLink>

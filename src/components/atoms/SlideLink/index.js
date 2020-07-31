@@ -8,7 +8,7 @@ const SlideLink = styled(Link)`
   text-decoration: none;
   padding-bottom: 0.25rem;
   background: ${({ theme }) => theme.colors.linkUnderline};
-  background-size: 100% 0.85rem;
+  background-size: 100% 0.65rem;
   background-repeat: no-repeat;
   background-position: left 85%;
   font-size: ${({ theme, fontSize }) =>
@@ -21,15 +21,15 @@ const SlideLink = styled(Link)`
   }
   span {
     display: inline;
-    transition: all 0.15s linear;
+    transition: all 0.1s linear;
     text-decoration: none;
     padding-bottom: 0.25rem;
     background: ${({ theme }) => theme.colors.linkUnderlineHover};
-    background-size: 0% 0.85rem;
+    background-size: 0% 0.65rem;
     background-repeat: no-repeat;
     background-position: left 85%;
     &:hover {
-      background-size: 100% 0.85rem;
+      background-size: 100% 0.65rem;
     }
   }
 `

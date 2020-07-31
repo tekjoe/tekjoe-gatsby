@@ -19,7 +19,9 @@ const CtaSection = styled.section`
 const CtaImage = styled.div`
   background-image: ${({ theme }) => theme.colors.gradientTopRight};
   display: flex;
-  max-height: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
   img {
     display: block;
     padding: 2rem;
@@ -28,11 +30,14 @@ const CtaImage = styled.div`
   @media (min-width: 768px) {
     flex: 1;
     flex-basis: 50%;
+    img {
+    }
   }
   @media (min-width: 992px) {
     order: 2;
     img {
       padding: 4rem;
+      height: auto;
     }
   }
 `

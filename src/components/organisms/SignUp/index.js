@@ -80,7 +80,7 @@ export default () => {
           their visions to life thoroughly and elegantly. If you're ready to
           take your site to the next level, I can help.
         </p>
-        <SignUpLink to="/">Contact</SignUpLink>
+        <SignUpLink to="/contact">Contact</SignUpLink>
       </SignUpBody>
     </SignUpSection>
   )

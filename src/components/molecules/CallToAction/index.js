@@ -19,7 +19,7 @@ const CallToAction = styled.div`
 const Subtitle = styled.p`
   font-size: ${({ theme }) => theme.typography.h6};
   margin-bottom: 1.5rem;
-  color: ${({ theme }) => theme.colors.lightBlue};
+  color: ${({ theme }) => theme.colors.subtitleColor};
   &:after {
     content: " –";
   }

@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    allSanityPost {
+    allSanityPost(limit: 2) {
       edges {
         node {
           categories {
@@ -40,6 +40,7 @@ export const query = graphql`
             current
           }
           title
+          _id
           mainImage {
             asset {
               fluid(maxWidth: 900, maxHeight: 400) {

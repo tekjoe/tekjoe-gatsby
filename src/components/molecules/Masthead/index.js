@@ -17,7 +17,7 @@ const MastheadSection = styled.div`
 `
 
 const Masthead = props => {
-  return <MastheadSection>{props.children}</MastheadSection>
+  return <MastheadSection {...props}>{props.children}</MastheadSection>
 }
 
 export default Masthead
