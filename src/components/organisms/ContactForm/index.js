@@ -9,11 +9,13 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 2rem;
   label {
     margin-bottom: 1rem;
     font-size: 1.125rem;
     font-family: monospace;
+  }
+  @media (min-width: 992px) {
+    padding: 2rem;
   }
 `
 

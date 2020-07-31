@@ -25,7 +25,7 @@ const ContactSection = styled.section`
 
 const ContactBody = styled.div`
   flex: 1;
-  padding: 2rem;
+  padding-bottom: 2rem;
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -36,6 +36,9 @@ const ContactBody = styled.div`
 
   p {
     margin-bottom: 1.25rem;
+  }
+  @media (min-width: 992px) {
+    padding: 2rem;
   }
 `
 

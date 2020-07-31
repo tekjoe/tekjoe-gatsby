@@ -5,6 +5,12 @@ import Masthead from "../components/molecules/Masthead"
 import ExternalLink from "../components/atoms/ExternalLink"
 import SEO from "../components/seo"
 import SignUp from "../components/organisms/SignUp"
+import apartment from "../images/apartment.svg"
+import wedding from "../images/wedding.svg"
+import hamburger from "../images/hamburger.svg"
+import misinformation from "../images/misinformation.svg"
+import medicine from "../images/medicine.svg"
+import coffee from "../images/coffee.svg"
 
 const PortfolioGrid = styled.section`
   grid-column: 2/-2;
@@ -30,11 +36,17 @@ Project.Img = styled.div`
   background: ${({ theme }) => theme.colors.gradientTopRight};
   height: 300px;
   margin-bottom: 1rem;
+  display: flex;
   img {
     display: block;
     max-width: 100%;
     height: 100%;
+    object-fit: contain;
     margin: 0 auto;
+    flex: 1;
+  }
+  @media (min-width: 1200px) {
+    height: 400px;
   }
 `
 Project.Body = styled.div`
@@ -60,7 +72,7 @@ const WorkPage = () => (
     <PortfolioGrid>
       <Project>
         <Project.Img>
-          <img src="" alt="Oak Ridge Contracting" />
+          <img src={apartment} alt="Oak Ridge Contracting" />
         </Project.Img>
         <Project.Body>
           <h3>
@@ -89,26 +101,25 @@ const WorkPage = () => (
       </Project>
       <Project>
         <Project.Img>
-          <img src="" alt="Oak Ridge Contracting" />
+          <img src={wedding} alt="Lee's Classic Cars" />
         </Project.Img>
         <Project.Body>
           <h3>
             <ExternalLink
-              href="https://www.oakridgecontracting.com"
+              href="https://www.leesclassiccarswi.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Oak Ridge Contracting</span>
+              <span>Lee's Classic Cars</span>
             </ExternalLink>
           </h3>
           <p>
-            Oak Ridge Contracting is a small business in southeastern Wisconsin
-            that was looking to improve their presence online. This website is
-            blazing fast because it's powered by Gatbsy.js, a static site
-            generator for React applications.
+            Lee's Classic Cars is a classic car wedding experience that needed
+            the ability to book car reservations on their site. This project is
+            powered by WordPress, WooCommerce, and PayPal.
           </p>
           <ExternalLink
-            href="https://www.oakridgecontracting.com"
+            href="https://www.leesclassiccarswi.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -118,26 +129,26 @@ const WorkPage = () => (
       </Project>
       <Project>
         <Project.Img>
-          <img src="" alt="Oak Ridge Contracting" />
+          <img src={hamburger} alt="Birch + Butcher" />
         </Project.Img>
         <Project.Body>
           <h3>
             <ExternalLink
-              href="https://www.oakridgecontracting.com"
+              href="https://www.birchandbutcher.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Oak Ridge Contracting</span>
+              <span>Birch + Butcher</span>
             </ExternalLink>
           </h3>
           <p>
-            Oak Ridge Contracting is a small business in southeastern Wisconsin
-            that was looking to improve their presence online. This website is
-            blazing fast because it's powered by Gatbsy.js, a static site
-            generator for React applications.
+            Birch + Butcher, one of Milwaukee's best dining experiences, needed
+            a website that was easy to maintain and easy to look at. This
+            project includes an interactive map featuring nearby attractions, an
+            embedded Instagram feed, and an easy to update menu section.
           </p>
           <ExternalLink
-            href="https://www.oakridgecontracting.com"
+            href="https://www.birchandbutcher.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -147,26 +158,25 @@ const WorkPage = () => (
       </Project>
       <Project>
         <Project.Img>
-          <img src="" alt="Oak Ridge Contracting" />
+          <img src={misinformation} alt="Hogwash App" />
         </Project.Img>
         <Project.Body>
           <h3>
             <ExternalLink
-              href="https://www.oakridgecontracting.com"
+              href="http://hogwash.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Oak Ridge Contracting</span>
+              <span>Hogwash Misinformation App</span>
             </ExternalLink>
           </h3>
           <p>
-            Oak Ridge Contracting is a small business in southeastern Wisconsin
-            that was looking to improve their presence online. This website is
-            blazing fast because it's powered by Gatbsy.js, a static site
-            generator for React applications.
+            In a post-truth world, misinformation reigns supreme. Prove your
+            loved ones wrong with Hogwash – a simple tool for debunking fake
+            news and misinformation you read online.
           </p>
           <ExternalLink
-            href="https://www.oakridgecontracting.com"
+            href="http://hogwash.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -176,26 +186,25 @@ const WorkPage = () => (
       </Project>
       <Project>
         <Project.Img>
-          <img src="" alt="Oak Ridge Contracting" />
+          <img src={medicine} alt="COVID-19 Dashboard" />
         </Project.Img>
         <Project.Body>
           <h3>
             <ExternalLink
-              href="https://www.oakridgecontracting.com"
+              href="http://joevid-19.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Oak Ridge Contracting</span>
+              <span>COVID-19 Dashboard</span>
             </ExternalLink>
           </h3>
           <p>
-            Oak Ridge Contracting is a small business in southeastern Wisconsin
-            that was looking to improve their presence online. This website is
-            blazing fast because it's powered by Gatbsy.js, a static site
-            generator for React applications.
+            Experiencing information overload? Reduce your COVID-19 anxiety with
+            JOEVID-19 and keep your mind quaran-toned. Credit to the Covid
+            Tracking Project API.
           </p>
           <ExternalLink
-            href="https://www.oakridgecontracting.com"
+            href="http://joevid-19.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -205,26 +214,25 @@ const WorkPage = () => (
       </Project>
       <Project>
         <Project.Img>
-          <img src="" alt="Oak Ridge Contracting" />
+          <img src={coffee} alt="React Coffee Logger Project" />
         </Project.Img>
         <Project.Body>
           <h3>
             <ExternalLink
-              href="https://www.oakridgecontracting.com"
+              href="http://coffee-logger.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Oak Ridge Contracting</span>
+              <span>React Coffee Logger</span>
             </ExternalLink>
           </h3>
           <p>
-            Oak Ridge Contracting is a small business in southeastern Wisconsin
-            that was looking to improve their presence online. This website is
-            blazing fast because it's powered by Gatbsy.js, a static site
-            generator for React applications.
+            This web application was developed with React, Redux, and Firebase.
+            The goal of the project was to implement user authentication and
+            persistent data with Google Firebase.
           </p>
           <ExternalLink
-            href="https://www.oakridgecontracting.com"
+            href="http://coffee-logger.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
