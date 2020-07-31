@@ -23,15 +23,15 @@ The biggest and most frustrating challenge I encountered while creating this das
 
 ![](http://tekjoe.dev/wp-content/uploads/2020/04/safari-select-1024x329.png)
 
-<select> element, Safari styling applied
+`<select>` element, Safari styling applied
 
 ![](http://tekjoe.dev/wp-content/uploads/2020/04/chrome-select-1024x299.png)
 
-<select> element, Chrome styling applied
+`<select>` element, Chrome styling applied
 
 ![](http://tekjoe.dev/wp-content/uploads/2020/04/firefox-select-1024x359.png)
 
-<select> element, Firefox styling applied
+`<select>` element, Firefox styling applied
 
 After consulting with my web developer friends (Hi, Ted 👋🏼), I eventually found my way to an [article by Ben Nadel.](https://www.bennadel.com/blog/3776-effortless-custom-form-input-styling-with-webkit-appearance-none.htm?site-photo=321) The key was setting `-webkit-appearance` to `none`. This small change overrode each browsers’ default `<select>` element styling with my own.
 
@@ -41,6 +41,6 @@ After consulting with my web developer friends (Hi, Ted 👋🏼), I eventually 
 
 ![](http://tekjoe.dev/wp-content/uploads/2020/04/Screen-Shot-2020-04-14-at-1.06.57-PM.png)
 
-My own <select> element styling
+My own `<select>` element styling
 
 I’m extremely happy with how everything turned out and I hope you find my dashboard project helpful. If you have any questions about this project, please hit me up through [email](mailto:joe@tekjoe.org) or [social media](https://twitter.com/_tekjoe).
