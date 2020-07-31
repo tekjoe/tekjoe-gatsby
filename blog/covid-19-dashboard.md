@@ -1,5 +1,5 @@
 ---
-path: joevid-19
+path: covid-dashboard
 date: 2020-07-31T19:42:10.901Z
 title: COVID-19 Dashboard
 ---
