@@ -1,17 +1,18 @@
-const slash = require("slash")
-const path = require("path")
-
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const posts = await graphql(`
+
+  const blogPostTemplate = require.resolve(`./src/templates/post.js`)
+
+  const result = await graphql(`
     {
-      allSanityPost {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
         edges {
           node {
-            id
-            title
-            slug {
-              current
+            frontmatter {
+              slug
             }
           }
         }
@@ -19,24 +20,19 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  // Check for any errors
-  if (posts.errors) {
-    throw new Error(posts.errors)
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
   }
 
-  // Access query postss via object destructuring
-  const { allSanityPost } = posts.data
-
-  const postTemplate = path.resolve(`./src/templates/post.js`)
-  // We want to create a detailed page for each
-  // post node. We'll just use the WordPress Slug for the slug.
-  // The Post ID is prefixed with 'POST_'
-  allSanityPost.edges.forEach(edge => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/blog/${edge.node.slug.current}/`,
-      component: slash(postTemplate),
+      path: node.frontmatter.slug,
+      component: blogPostTemplate,
       context: {
-        id: edge.node.id,
+        // additional data can be passed via context
+        slug: node.frontmatter.slug,
       },
     })
   })

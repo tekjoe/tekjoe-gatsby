@@ -33,44 +33,32 @@ const StyledImage = styled(Img)`
   margin-bottom: 2rem;
 `
 
-export default ({ data }) => {
-  const post = data.sanityPost
+export default function Template({ data }) {
+  const { markdownRemark } = data
   return (
     <Layout>
-      <SEO title={post.title} />
-      <PostSection>
+      <SEO title="post" />
+      {/* <PostSection>
         <h1>{post.title}</h1>
         <ByLine>
           <SlideLink to="/">{post.author.name}</SlideLink>
         </ByLine>
-
-        {post.mainImage ? (
-          <StyledImage fluid={post.mainImage.asset.fluid} />
-        ) : null}
-
         <PostBody>
           <BlockContent blocks={post._rawBody} />
         </PostBody>
-      </PostSection>
+      </PostSection> */}
     </Layout>
   )
 }
 
-export const query = graphql`
-  query($id: String!) {
-    sanityPost(id: { eq: $id }) {
-      title
-      _rawBody
-      author {
-        name
-      }
-      publishedAt(formatString: "MMMM D, YYYY")
-      mainImage {
-        asset {
-          fluid(maxWidth: 900) {
-            ...GatsbySanityImageFluid
-          }
-        }
+export const pageQuery = graphql`
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        slug
+        title
       }
     }
   }

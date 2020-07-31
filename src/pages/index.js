@@ -10,7 +10,7 @@ import SignUp from "../components/organisms/SignUp"
 import SlideLink from "../components/atoms/SlideLink"
 import ArticlesSection from "../components/organisms/ArticlesSection"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Masthead>
@@ -23,35 +23,9 @@ const IndexPage = ({ data }) => (
       </SlideLink>
     </Masthead>
     <CTASection />
-    <ArticlesSection articles={data.allSanityPost.edges} />
+    {/* <ArticlesSection articles={data.allSanityPost.edges} /> */}
     <SignUp />
   </Layout>
 )
-
-export const query = graphql`
-  query {
-    allSanityPost(limit: 2) {
-      edges {
-        node {
-          categories {
-            title
-          }
-          slug {
-            current
-          }
-          title
-          _id
-          mainImage {
-            asset {
-              fluid(maxWidth: 900, maxHeight: 400) {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage
