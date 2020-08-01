@@ -57,12 +57,9 @@ export default ({ articles }) => {
           My musings on web development, freelancing, productivity, movies,
           tech, and more.
         </h2>
-        <SlideLink fontSize="h6" to="/blog">
-          Read more on my blog
-        </SlideLink>
       </ArticleSection.Intro>
       {articles.map(article => (
-        <Article article={article} key={article.node._id} />
+        <Article article={article} key={article.node.id} />
       ))}
     </ArticleSection>
   )

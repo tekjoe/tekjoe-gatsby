@@ -8,10 +8,25 @@ import SlideLink from "../components/atoms/SlideLink"
 import BlockContent from "../components/molecules/BlockContent"
 
 const PostSection = styled.section`
+  grid-area: blog;
   grid-column: 2/-2;
   margin: 4rem 0;
+  width: 100%;
   h1 {
     font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  a {
+    color: ${({ theme }) => theme.colors.linkText};
+    text-decoration: none;
+    background: ${({ theme }) => theme.colors.linkUnderline};
+    background-size: 100% 0.35rem;
+    background-repeat: no-repeat;
+    background-position: left 85%;
   }
   @media (min-width: 1200px) {
     grid-column: 4/-4;
@@ -35,18 +50,23 @@ const StyledImage = styled(Img)`
 
 export default function Template({ data }) {
   const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
   return (
     <Layout>
       <SEO title="post" />
-      {/* <PostSection>
-        <h1>{post.title}</h1>
+      <PostSection>
+        <h1>{frontmatter.title}</h1>
         <ByLine>
-          <SlideLink to="/">{post.author.name}</SlideLink>
+          <SlideLink to="/">{frontmatter.date}</SlideLink>
         </ByLine>
+        <img src={frontmatter.thumbnail} />
         <PostBody>
-          <BlockContent blocks={post._rawBody} />
+          <div
+            dangerouslySetInnerHTML={{ __html: html }}
+            style={{ width: "100%" }}
+          ></div>
         </PostBody>
-      </PostSection> */}
+      </PostSection>
     </Layout>
   )
 }
@@ -59,6 +79,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        thumbnail
       }
     }
   }

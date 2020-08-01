@@ -111,9 +111,15 @@ const AboutPage = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <Masthead style={{ marginBottom: "2rem" }}>
-        <h4 style={{ textAlign: "center", marginBottom: "1rem" }}>
+        <h1
+          style={{
+            textAlign: "center",
+            marginBottom: "1rem",
+            fontSize: "3rem",
+          }}
+        >
           Hey, I'm Joe Ramirez.
-        </h4>
+        </h1>
         <p style={{ textAlign: "center", fontSize: "1.25rem" }}>
           I'm a freelance web developer from Milwaukee, WI.
         </p>

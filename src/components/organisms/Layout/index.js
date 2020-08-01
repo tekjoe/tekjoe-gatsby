@@ -31,6 +31,7 @@ const Grid = styled.main`
     "header"
     "masthead"
     "cta"
+    "blog"
     "articles"
     "sign-up"
     "pagination"

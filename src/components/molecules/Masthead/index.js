@@ -16,6 +16,10 @@ const MastheadSection = styled.div`
   }
 `
 
+MastheadSection.Title = styled.h1`
+  font-size: ${({ theme }) => theme.typography.h2};
+`
+
 const Masthead = props => {
   return <MastheadSection {...props}>{props.children}</MastheadSection>
 }

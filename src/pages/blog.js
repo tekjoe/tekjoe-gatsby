@@ -7,12 +7,32 @@ import SignUp from "../components/organisms/SignUp"
 
 import ArticlesSection from "../components/organisms/ArticlesSection"
 
-const BlogPage = () => (
-  <Layout>
-    <SEO title="Blog" />
-    {/* <ArticlesSection articles={data.allSanityPost.edges} /> */}
-    <SignUp />
-  </Layout>
-)
+const BlogPage = ({ data }) => {
+  const articles = data.allMarkdownRemark.edges
+  return (
+    <Layout>
+      <SEO title="Blog" />
+      <ArticlesSection articles={articles} />
+      <SignUp />
+    </Layout>
+  )
+}
 
 export default BlogPage
+
+export const query = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            slug
+            title
+            thumbnail
+          }
+          id
+        }
+      }
+    }
+  }
+`
