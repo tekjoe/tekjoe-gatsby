@@ -2,6 +2,7 @@
 slug: covid-dashboard
 date: 2020-07-31T20:29:39.104Z
 title: COVID-19 Dashboard
+thumbnail: /assets/joevid_thumb.png
 ---
 [Check out the JOEVID-19 dashboard here.](http://joevid-19.netlify.com/)
 
@@ -36,7 +37,9 @@ The biggest and most frustrating challenge I encountered while creating this das
 After consulting with my web developer friends (Hi, Ted 👋🏼), I eventually found my way to an [article by Ben Nadel.](https://www.bennadel.com/blog/3776-effortless-custom-form-input-styling-with-webkit-appearance-none.htm?site-photo=321) The key was setting `-webkit-appearance` to `none`. This small change overrode each browsers’ default `<select>` element styling with my own.
 
 ```css
-
+select {
+  -webkit-appearance: none;
+}
 ```
 
 ![](http://tekjoe.dev/wp-content/uploads/2020/04/Screen-Shot-2020-04-14-at-1.06.57-PM.png)
