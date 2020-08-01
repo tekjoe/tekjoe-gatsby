@@ -2,6 +2,7 @@
 slug: hogwash-app
 date: 2020-08-01T14:37:19.089Z
 title: Hogwash - Fact Check Tools API
+thumbnail: /assets/hogwash_thumb.png
 ---
 Hydroxychloroquine. 5G towers. Disinfectant injections.
 
