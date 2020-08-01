@@ -59,7 +59,7 @@ export default function Template({ data }) {
         <ByLine>
           <SlideLink to="/">{frontmatter.date}</SlideLink>
         </ByLine>
-        <img src={frontmatter.thumbnail} />
+        <img src={frontmatter.thumbnail} alt="Blog post thumbnail" />
         <PostBody>
           <div
             dangerouslySetInnerHTML={{ __html: html }}

@@ -5,6 +5,7 @@ module.exports = {
     title: `tekjoe`,
     description: `Joe Ramirez – Freelance web developer with a proven track record of helping small businesses grow and prosper online.`,
     author: `@tekjoe`,
+    image: "/images/tekjoe-image-preview.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
