@@ -19,6 +19,9 @@ const Article = styled.article`
   }
   @media (min-width: 768px) {
     padding: 2rem 4rem;
+    p {
+      font-size: 1.125rem;
+    }
   }
   @media (min-width: 992px) {
     grid-column: span 6;
@@ -40,7 +43,6 @@ const CategoryList = styled.div`
 
 export default ({ article }) => {
   const blogPost = article.node.frontmatter
-  console.log(article)
   return (
     <Article>
       <Article.Image src={blogPost.thumbnail} />
@@ -52,7 +54,7 @@ export default ({ article }) => {
           <Badge>{category.title}</Badge>
         ))}
       </CategoryList> */}
-      <p style={{ fontSize: "1.125rem" }}>
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente fugit
         reiciendis, incidunt eum ipsa in reprehenderit architecto recusandae.
       </p>

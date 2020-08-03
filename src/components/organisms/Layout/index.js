@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled, { ThemeProvider } from "styled-components"
+import { motion, AnimatePresence } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
-
 import { lightTheme, darkTheme } from "../../../util/theme"
 import { GlobalStyle } from "../../../util/global"
 
@@ -10,7 +10,6 @@ import Footer from "../Footer"
 
 const Container = styled.div`
   max-width: 1440px;
-  background: white;
   @media (min-width: 768px) {
     max-width: 720px;
     margin: 3rem auto;
@@ -66,8 +65,9 @@ export const Layout = ({ children }) => {
           <Header
             siteTitle={data.site.siteMetadata.title}
             toggleTheme={toggleTheme}
+            initial={false}
           />
-          {children}
+          <AnimatePresence>{children}</AnimatePresence>
           <Footer />
         </Grid>
       </Container>

@@ -17,6 +17,9 @@ export const GlobalStyle = createGlobalStyle`
     transition-property: background, color;
     transition-duration: 0.25s;
     transition-timing-function: linear;
+    &.prevent-scroll {
+      overflow-y: hidden;
+    }
   };
   p {
     font-size: ${({ theme }) => theme.typography.paragraph};

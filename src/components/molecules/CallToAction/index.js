@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 const CallToAction = styled.div`
   order: 2;

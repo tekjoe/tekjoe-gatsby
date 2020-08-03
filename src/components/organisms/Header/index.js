@@ -1,9 +1,10 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-
 import SlideLink from "../../atoms/SlideLink"
+import MenuTrigger from "../../atoms/MenuTrigger"
 import ThemeToggler from "../../molecules/ThemeToggler"
+import MobileNav from "../MobileNav"
 
 const DesktopHeader = styled.header`
   grid-area: header;
@@ -44,30 +45,47 @@ const NavigationMenu = styled.ul`
   }
 `
 
-const Header = ({ siteTitle, toggleTheme }) => (
-  <DesktopHeader>
-    <div>
-      <SlideLink to="/">&lt;{siteTitle}/&gt;</SlideLink>
-    </div>
-    <Navigation>
-      <NavigationMenu>
-        <li>
-          <SlideLink to="/about">About</SlideLink>
-        </li>
-        <li>
-          <SlideLink to="/work">Work</SlideLink>
-        </li>
-        <li>
-          <SlideLink to="/contact">Contact</SlideLink>
-        </li>
-        <li>
-          <SlideLink to="/blog">Blog</SlideLink>
-        </li>
-      </NavigationMenu>
-      <ThemeToggler toggleTheme={toggleTheme} />
-    </Navigation>
-  </DesktopHeader>
-)
+const Header = ({ siteTitle, toggleTheme }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+    toggleBodyScroll()
+  }
+  const toggleBodyScroll = () => {
+    const body = document.querySelector("body")
+    body.classList.contains("prevent-scroll")
+      ? body.classList.remove("prevent-scroll")
+      : body.classList.add("prevent-scroll")
+  }
+  return (
+    <DesktopHeader>
+      <div>
+        <SlideLink to="/">&lt;{siteTitle}/&gt;</SlideLink>
+      </div>
+      <Navigation>
+        <NavigationMenu>
+          <li>
+            <SlideLink to="/about">About</SlideLink>
+          </li>
+          <li>
+            <SlideLink to="/work">Work</SlideLink>
+          </li>
+          <li>
+            <SlideLink to="/contact">Contact</SlideLink>
+          </li>
+          <li>
+            <SlideLink to="/blog">Blog</SlideLink>
+          </li>
+          <li>
+            <ThemeToggler toggleTheme={toggleTheme} />
+          </li>
+        </NavigationMenu>
+        <MenuTrigger toggleMenu={toggleMenu} />
+        <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
+      </Navigation>
+    </DesktopHeader>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

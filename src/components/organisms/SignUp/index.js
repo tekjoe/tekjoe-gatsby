@@ -50,17 +50,26 @@ const SignUpBody = styled.div`
   background: ${({ theme }) => theme.colors.accentColor};
   justify-content: space-between;
   flex: 2;
-  padding: 3rem;
+  padding: 2rem;
   & > * {
     margin-bottom: 1.5rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: ${({ theme }) => theme.colors.mintGreen};
   }
   p {
-    font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.6;
+  }
+  @media (min-width: 768px) {
+    padding: 3rem;
+    h2 {
+      font-size: 2rem;
+      color: ${({ theme }) => theme.colors.mintGreen};
+    }
+    p {
+      font-size: 1.25rem;
+    }
   }
   @media (min-width: 992px) {
     padding: 4rem;

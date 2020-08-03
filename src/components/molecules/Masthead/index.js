@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 const MastheadSection = styled.div`
   grid-area: masthead;

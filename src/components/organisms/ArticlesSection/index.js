@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Article from "../Article"
 import SlideLink from "../../atoms/SlideLink"
+import { motion } from "framer-motion"
 
 const ArticleSection = styled.section`
   grid-area: articles;
