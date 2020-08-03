@@ -47,24 +47,26 @@ NavMenu.Link = styled(Link)`
 const variants = {
   open: {
     width: "100vw",
+    opacity: 1,
     transition: {
       type: "spring",
       damping: 12,
       stiffness: 100,
       duration: 0.05,
-      staggerChildren: 0.03,
+      staggerChildren: 0.06,
       delayChildren: 0.2,
       staggerDirection: 1,
     },
   },
   closed: {
     width: "0",
+    opacity: 0,
     transition: {
       type: "spring",
       damping: 15,
       stiffness: 100,
       duration: 0.05,
-      staggerChildren: 0.01,
+      staggerChildren: 0.06,
       delayChildren: 0.1,
       staggerDirection: 1,
     },

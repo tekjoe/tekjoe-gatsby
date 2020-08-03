@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled, { ThemeProvider } from "styled-components"
-import { motion, AnimatePresence } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
+
 import { lightTheme, darkTheme } from "../../../util/theme"
 import { GlobalStyle } from "../../../util/global"
 
@@ -67,7 +67,7 @@ export const Layout = ({ children }) => {
             toggleTheme={toggleTheme}
             initial={false}
           />
-          <AnimatePresence>{children}</AnimatePresence>
+          {children}
           <Footer />
         </Grid>
       </Container>
